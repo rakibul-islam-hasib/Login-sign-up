@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Login Form</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        input:focus ~ span,
+        input:valid ~ span {
+            transform: translateY(-1.5rem) translateX(0.75rem);
+            font-size: 0.75rem;
+            color: #00dfc4;
+            background-color: #1d2b3a;
+            padding: 0 0.5rem;
+        }
+    </style>
+</head>
+
+<body class="flex flex-col items-center justify-center min-h-screen bg-gray-800 gap-8">
+    <div class="relative w-64">
+        <input type="text" required="required"
+            class="w-full px-4 py-2 bg-gray-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-blue-500"
+            id="first_name">
+        <span
+            class="absolute left-4 px-2 pointer-events-none text-gray-400 text-sm transition-all duration-500 transform origin-left"
+        >First Name</span>
+    </div>
+    <div class="relative w-64">
+        <input type="text" required="required"
+            class="w-full px-4 py-2 bg-gray-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-blue-500"
+            id="last_name">
+        <span
+            class="absolute left-4 px-2 pointer-events-none text-gray-400 text-sm transition-all duration-500 transform origin-left"
+        >Last Name</span>
+    </div>
+</body>
+
+</html>
